@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  web:
+    build:
+      context: ./
+    container_name: web
+    networks:
+      - k8sinaweek
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    
+networks:
+  k8sinaweek:
+    name: k8sinaweek
