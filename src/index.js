@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api")
+    fetch("/api/")
       .then(res => res.text())
       .then((result) => {
         this.setState({
